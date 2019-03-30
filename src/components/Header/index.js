@@ -58,7 +58,7 @@ class Header extends Component {
                 sysTime
             })
         },1000)
-        this.getWeatherAPIData();
+        // this.getWeatherAPIData();
         var currentUser = AV.User.current();
         if(currentUser){  
             currentUser.isAuthenticated().then(function(authenticated){
@@ -91,20 +91,20 @@ class Header extends Component {
     }
 
     //获取天气API
-    getWeatherAPIData(){
-        let city = '广州'
-        axios.jsonp({
-            url:'http://api.map.baidu.com/telematics/v3/weather?location='+encodeURIComponent(city)+'&output=json&ak=3p49MVra6urFRGOT9s8UBWr2'
-        }).then((res)=>{
-            if(res.status == 'success'){
-                let data = res.results[0].weather_data[0];
-                this.setState({
-                    dayPictureUrl:data.dayPictureUrl,
-                    weather:data.weather
-                })
-            }
-        })
-    }
+    // getWeatherAPIData(){
+    //     let city = '广州'
+    //     axios.jsonp({
+    //         url:'http://api.map.baidu.com/telematics/v3/weather?location='+encodeURIComponent(city)+'&output=json&ak=3p49MVra6urFRGOT9s8UBWr2'
+    //     }).then((res)=>{
+    //         if(res.status == 'success'){
+    //             let data = res.results[0].weather_data[0];
+    //             this.setState({
+    //                 dayPictureUrl:data.dayPictureUrl,
+    //                 weather:data.weather
+    //             })
+    //         }
+    //     })
+    // }
 
     hanleOutLogin = (e)=>{
         var loading = document.getElementById("ajaxLoading");
@@ -206,13 +206,13 @@ class Header extends Component {
                         {this.props.menuName}
                     </Col>
                     <Col span={20} className="weather">
-                        <span className="date">{this.state.sysTime}</span>
+                        {/* <span className="date">{this.state.sysTime}</span>
                         <span className="weather-img">
                             <img src={this.state.dayPictureUrl} alt=""/>
                         </span>
                         <span className="weather-detail">
                             {this.state.weather}
-                        </span>
+                        </span> */}
                     </Col>
                 </Row>
                 }
