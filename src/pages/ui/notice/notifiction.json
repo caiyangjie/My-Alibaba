@@ -1,0 +1,18 @@
+{
+    "success":{
+        "message":"发工资了",
+        "description":"上个月考勤22天,迟到12天,实发工资250,请笑纳!!!"
+    },
+    "info":{
+        "message":"发工资了",
+        "description":"工资已派发完毕"
+    },
+    "warning":{
+        "message":"发工资了",
+        "description":"由于上个月迟到次数过多,这个月工资实发0!!!"
+    },
+    "error":{
+        "message":"发工资了",
+        "description":"系统获取信息错误!!!"
+    }
+}
